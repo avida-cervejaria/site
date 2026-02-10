@@ -1,7 +1,7 @@
 {
   "name": "site",
-  "version": "0.0.3",
-  "homepage": "https://avida-cervejaria.github.io/site",
+  "version": "0.0.4",
+  "homepage": "https://avidacervejaria.com.br",
   "private": true,
   "dependencies": {
     "react": "^19.2.4",
