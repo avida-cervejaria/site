@@ -1,77 +1,92 @@
+@import './colors.css';
+
+
 body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
-    background-color: #000;
-    color: #fff;
-    overflow: hidden;
+  margin: 0;
+  font-family: 'Vinila', 'Georgia', serif;
+  background-color: var(--color-black);
+  color: var(--color-cream);
+  overflow: hidden;
 }
 
 .App {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #000;
-    text-align: center;
-    position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-black);
+  text-align: center;
+  position: relative;
 }
 
 .content {
-    max-width: 600px;
-    padding: 2rem;
+  max-width: 600px;
+  padding: 2rem;
 }
 
-h1 {
-    font-size: clamp(2.5rem, 8vw, 6rem);
-    font-weight: 800;
-    margin: 0 0 1rem 0;
-    background: linear-gradient(135deg, #fff 0%, #ffd700 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    letter-spacing: -0.02em;
+/* --- Brand logo image --- */
+.brand-logo {
+  width: clamp(220px, 55vw, 460px);
+  height: auto;
+  display: block;
+  margin: 0 auto 1.5rem;
+}
+
+/* --- Blazon (brasão) — secondary visual --- */
+.brand-blazon {
+  width: clamp(52px, 10vw, 80px);
+  height: auto;
+  display: block;
+  margin: 0 auto 1.5rem;
+  opacity: 0.85;
 }
 
 p {
-    font-size: clamp(1.2rem, 4vw, 2rem);
-    margin: 0 0 2rem 0;
-    opacity: 0.9;
-    font-weight: 300;
+  font-family: 'Vinila', 'Georgia', serif;
+  font-size: clamp(1rem, 3.5vw, 1.6rem);
+  margin: 0 0 2rem 0;
+  opacity: 0.88;
+  font-weight: normal;
+  color: var(--color-cream);
+  letter-spacing: 0.03em;
 }
 
 .instagram-link {
-    display: inline-block;
-    font-size: 1.2rem;
-    color: #fff;
-    text-decoration: none;
-    padding: 1rem 2rem;
-    border: 2px solid #ffd700;
-    border-radius: 50px;
-    transition: all 0.3s ease;
-    font-weight: 500;
+  display: inline-block;
+  font-family: 'Vinila', 'Georgia', serif;
+  font-size: 1rem;
+  color: var(--color-cream);
+  text-decoration: none;
+  padding: 0.85rem 2rem;
+  border: 2px solid var(--color-main);
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  font-weight: normal;
+  letter-spacing: 0.04em;
 }
 
 .instagram-link:hover {
-    background-color: #ffd700;
-    color: #000;
-    transform: translateY(-2px);
+  background-color: var(--color-main);
+  color: var(--color-black);
+  transform: translateY(-2px);
 }
 
 .footer {
-    position: absolute;
-    bottom: 2rem;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 0.75rem;
-    color: rgba(255, 255, 255, 0.6);
-    font-weight: 300;
-    letter-spacing: 0.05em;
-    white-space: nowrap;
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: 'Vinila', 'Georgia', serif;
+  font-size: 0.7rem;
+  color: rgba(255, 247, 247, 0.45);
+  font-weight: normal;
+  letter-spacing: 0.07em;
+  white-space: nowrap;
 }
 
 @media (max-width: 480px) {
-    .footer {
-        font-size: 0.7rem;
-        bottom: 1.5rem;
-    }
+  .footer {
+    font-size: 0.65rem;
+    bottom: 1.5rem;
+  }
 }
