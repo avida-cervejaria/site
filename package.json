@@ -1,6 +1,6 @@
 {
   "name": "site",
-  "version": "0.0.6",
+  "version": "1.0.0",
   "homepage": "https://avidacervejaria.com.br",
   "private": true,
   "dependencies": {
