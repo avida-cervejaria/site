@@ -34,3 +34,67 @@ jobs:
         steps:
             - id: deployment
               uses: actions/deploy-pages@v4
+
+    release:
+        name: Create Release and Summary
+        runs-on: ubuntu-latest
+        needs: deploy
+        permissions:
+            contents: write
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v4
+              with:
+                  fetch-depth: 0
+
+            - name: Ler versão do package.json
+              id: pkg
+              run: echo "version=v$(node -p "require('./package.json').version")" >> $GITHUB_OUTPUT
+
+            - name: Criar tag e release
+              env:
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+              run: |
+                  VERSION="${{ steps.pkg.outputs.version }}"
+
+                  git config user.name "github-actions[bot]"
+                  git config user.email "github-actions[bot]@users.noreply.github.com"
+
+                  if git rev-parse "$VERSION" >/dev/null 2>&1; then
+                      echo "⚠️  Tag $VERSION já existe, ignorando criação da release"
+                      exit 0
+                  fi
+
+                  git tag -a "$VERSION" -m "Release $VERSION"
+                  git push origin "$VERSION"
+
+                  MESSAGE=$(git log -1 --pretty=%B)
+
+                  gh release create "$VERSION" \
+                      --title "🍺 Release $VERSION" \
+                      --notes "## Ávida Cervejaria $VERSION
+
+                  ### 🌐 Site
+                  - [avidacervejaria.com.br](https://avidacervejaria.com.br)
+
+                  ### 📌 Versão
+                  - \`$VERSION\`
+
+                  ### 📝 Alterações
+                  \`\`\`
+                  $MESSAGE
+                  \`\`\`
+
+                  ### 👤 Informações de Deploy
+                  - **Desenvolvedor**: @${{ github.actor }}
+                  - **Workflow**: [Ver execução](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }})
+                  - **Commit**: [Ver commit](https://github.com/${{ github.repository }}/commit/${{ github.sha }})"
+
+            - name: Resumo do deploy
+              run: |
+                  echo "✅ Deploy concluído com sucesso!"
+                  echo ""
+                  echo "🌐 Site: https://avidacervejaria.com.br"
+                  echo "🏷️  Versão: ${{ steps.pkg.outputs.version }}"
+                  echo "👤 Desenvolvedor: ${{ github.actor }}"
+                  echo "📝 Commit: ${{ github.sha }}"
