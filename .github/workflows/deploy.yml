@@ -72,10 +72,10 @@ jobs:
 
                   gh release create "$VERSION" \
                       --title "🍺 Release $VERSION" \
-                      --notes "## Ávida Cervejaria $VERSION
+                      --notes "## Ávida $VERSION
 
                   ### 🌐 Site
-                  - [avidacervejaria.com.br](https://avidacervejaria.com.br)
+                  - [bebaavida.com.br](https://bebaavida.com.br)
 
                   ### 📌 Versão
                   - \`$VERSION\`
@@ -94,7 +94,7 @@ jobs:
               run: |
                   echo "✅ Deploy concluído com sucesso!"
                   echo ""
-                  echo "🌐 Site: https://avidacervejaria.com.br"
+                  echo "🌐 Site: https://bebaavida.com.br"
                   echo "🏷️  Versão: ${{ steps.pkg.outputs.version }}"
                   echo "👤 Desenvolvedor: ${{ github.actor }}"
                   echo "📝 Commit: ${{ github.sha }}"

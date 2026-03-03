@@ -1,12 +1,18 @@
-/* Ávida Cervejaria — Brand Color Palette */
+/* Ávida — Brand Color Palette */
 :root {
   /* Primary brand colors */
-  --color-main: #FA8100;       /* Laranja principal */
-  --color-secondary: #A20E27;  /* Vermelho escuro */
+  --color-main: #FA8100;
+  /* Laranja principal */
+  --color-secondary: #A20E27;
+  /* Vermelho escuro */
 
   /* Extended palette */
-  --color-deep-red: #520B19;   /* Vinho profundo */
-  --color-olive: #454B10;      /* Verde oliva */
-  --color-black: #000000;      /* Preto */
-  --color-cream: #FFF7F7;      /* Creme quente */
+  --color-deep-red: #520B19;
+  /* Vinho profundo */
+  --color-olive: #454B10;
+  /* Verde oliva */
+  --color-black: #000000;
+  /* Preto */
+  --color-cream: #FFF7F7;
+  /* Creme quente */
 }
