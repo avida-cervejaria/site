@@ -32,12 +32,12 @@ function App() {
           />
           <img
             src="/images/logo-460.png"
-            alt="Ávida Cervejaria"
+            alt="Ávida"
             className="brand-logo"
           />
         </picture>
 
-        <p>Um brinde a nada menos que tudo!</p>
+        <p>Um brinde a nada menos que tudo.</p>
 
         <a href="https://www.instagram.com/bebaavida" target="_blank" rel="noopener noreferrer" className="instagram-link">
           Siga @bebaavida no Instagram
