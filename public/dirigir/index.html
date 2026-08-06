@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- ===================================================================
+     ATALHO FALADO. /dirigir existe para ser dito em voz alta numa mesa de
+     bar; a página mora em /cerveja-sem-alcool-bafometro/, que é o que a
+     pessoa digita no Google e o que aparece no resultado da busca.
+
+     É meta refresh e não 301 porque a infra não oferece 301: os quatro
+     registros A do apex estão com proxied=false no Cloudflare (o GitHub
+     precisa enxergar o domínio direto para emitir o certificado), e o
+     GitHub Pages não faz redirect de servidor. O Google trata refresh de
+     0 s como redirect e consolida os sinais no canonical abaixo.
+
+     ⚠️ O QR das peças impressas aponta para a URL CANÔNICA, não para cá —
+     ninguém digita um QR, então o caminho do scanner não paga o salto.
+     =================================================================== -->
+<title>Cerveja sem álcool e o bafômetro — Ávida</title>
+<link rel="canonical" href="https://bebaavida.com.br/cerveja-sem-alcool-bafometro/">
+<meta http-equiv="refresh" content="0; url=/cerveja-sem-alcool-bafometro/">
+<link rel="icon" href="/favicon/favicon.ico">
+<meta name="theme-color" content="#000000">
+
+<style>
+  html,body{margin:0; height:100%}
+  body{background:#000; color:#fff; display:grid; place-items:center;
+    font-family:Georgia,"Times New Roman",serif; font-size:17px; line-height:1.6;
+    padding:24px; text-align:center}
+  a{color:#FA8200}
+</style>
+</head>
+<body>
+  <!-- Visível só se o refresh não acontecer. Não é tela de carregamento: é o
+       link, escrito, para quem chegou aqui sem o redirect funcionar. -->
+  <p>Esta página mudou de endereço.<br>
+  <a href="/cerveja-sem-alcool-bafometro/">Cerveja sem álcool e o bafômetro →</a></p>
+</body>
+</html>
