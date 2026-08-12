@@ -32,15 +32,6 @@ body {
   margin: 0 auto 1.5rem;
 }
 
-/* --- Blazon (brasão) — secondary visual --- */
-.brand-blazon {
-  width: clamp(52px, 10vw, 80px);
-  height: auto;
-  display: block;
-  margin: 0 auto 1.5rem;
-  opacity: 0.85;
-}
-
 p {
   font-family: 'Vinila', 'Georgia', serif;
   font-size: clamp(1rem, 3.5vw, 1.6rem);
