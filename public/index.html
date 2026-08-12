@@ -17,6 +17,33 @@
   <meta name="description" content="Ávida - Um brinde a nada menos que tudo." />
 
   <title>Ávida</title>
+
+  <link rel="canonical" href="https://bebaavida.com.br/" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+
+  <!-- Open Graph — sem isto, bebaavida.com.br colado no WhatsApp não gera
+       preview nenhum, e link no WhatsApp é a distribuição. O crawler de
+       preview NÃO executa JavaScript: como esta página é uma SPA (o corpo é
+       só <div id="root">), as tags precisam estar no HTML estático e a URL
+       da imagem precisa ser absoluta — %PUBLIC_URL% não vale aqui.
+
+       O texto é o mesmo da página, palavra por palavra: a tagline é copy
+       aprovada. Não escrever aqui nada que a página não diga. -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Ávida" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:url" content="https://bebaavida.com.br/" />
+  <meta property="og:title" content="Ávida" />
+  <meta property="og:description" content="Um brinde a nada menos que tudo." />
+  <meta property="og:image" content="https://bebaavida.com.br/images/og-avida.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Ávida" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Ávida" />
+  <meta name="twitter:description" content="Um brinde a nada menos que tudo." />
+  <meta name="twitter:image" content="https://bebaavida.com.br/images/og-avida.png" />
   <style>
     @font-face {
       font-family: 'Vinila';

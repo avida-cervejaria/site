@@ -5,20 +5,6 @@ function App() {
     <div className="App">
       <div className="content">
 
-        {/* Blazon — secondary visual, displayed above the typographic logo */}
-        <picture>
-          <source
-            srcSet="/images/blazon-200.png 2x, /images/blazon-100.png 1x"
-            type="image/png"
-          />
-          <img
-            src="/images/blazon-100.png"
-            srcSet="/images/blazon-200.png 2x"
-            alt=""
-            className="brand-blazon"
-          />
-        </picture>
-
         {/* Typographic logo — main brand identity */}
         <picture>
           <source
